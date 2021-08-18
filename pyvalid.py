@@ -4,7 +4,7 @@ import random, time
 numberOfQuestions = 10
 correctAnswers = 0
 for questionNumber in range(1,numberOfQuestions+1):
-    num1 = random.randint(0,9)
+    num1 = random.randint(1,9)
     num2 = random.randint(0,9)
     prompt = '#%s: %s x %s = ' % (questionNumber, num1, num2)
 
