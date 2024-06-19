@@ -1,9 +1,76 @@
-# Web Scraping with Python Code Samples
+# pandas-datareader
 
-These code samples are for the book <a href="http://shop.oreilly.com/product/0636920078067.do">Web Scraping with Python 2nd Edition</a>
+Up to date remote data access for pandas, works for multiple versions of
+pandas.
 
-If you're looking for the first edition code files, they can be found in the <a href="https://github.com/REMitchell/python-scraping/tree/master/v1">v1</a> directory.
+[![image](https://img.shields.io/pypi/v/pandas-datareader.svg)](https://pypi.python.org/pypi/pandas-datareader/)
+[![image](https://codecov.io/gh/pydata/pandas-datareader/branch/master/graph/badge.svg)](https://codecov.io/gh/pydata/pandas-datareader)
+[![image](https://readthedocs.org/projects/pandas-datareader/badge/?version=latest)](https://pandas-datareader.readthedocs.io/en/latest/)
+[![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License](https://img.shields.io/pypi/l/pandas-datareader)](https://pypi.org/project/pandas-datareader/)
 
-Most code for the second edition is contained in <a href="https://jupyter.org/install.html">Jupyter notebooks</a>. Although these files can be viewed directly in your browser in Github, some formatting changes and oddities may occur. I recommend that you clone the repository, install Jupyter, and view them locally for the best experience.
+## Installation
 
-The web changes, libraries update, and make mistakes and typos more frequently than I'd like to admit! If you think you've spotted an error, please feel free to make a pull request against this repository.
+Install using `pip`
+
+``` shell
+pip install pandas-datareader
+```
+
+## Usage
+
+``` python
+import pandas_datareader as pdr
+pdr.get_data_fred('GS10')
+```
+
+## Documentation
+
+[Stable documentation](https://pydata.github.io/pandas-datareader/) is available on
+[github.io](https://pydata.github.io/pandas-datareader/). A second copy of the stable
+documentation is hosted on [read the docs](https://pandas-datareader.readthedocs.io/)
+for more details.
+
+[Development documentation](https://pydata.github.io/pandas-datareader/devel/) is available
+for the latest changes in master.
+
+### Requirements
+
+Using pandas datareader requires the following packages:
+
+-   pandas>=1.5.3
+-   lxml
+-   requests>=2.19.0
+
+Building the documentation additionally requires:
+
+-   matplotlib
+-   ipython
+-   requests_cache
+-   sphinx
+-   pydata_sphinx_theme
+
+Development and testing additionally requires:
+
+-   black
+-   coverage
+-   codecov
+-   coveralls
+-   flake8
+-   pytest
+-   pytest-cov
+-   wrapt
+
+### Install latest development version
+
+``` shell
+python -m pip install git+https://github.com/pydata/pandas-datareader.git
+```
+
+or
+
+``` shell
+git clone https://github.com/pydata/pandas-datareader.git
+cd pandas-datareader
+python setup.py install
+```
